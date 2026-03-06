@@ -1,0 +1,120 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[default]{sourcesanspro}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & #2 \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Soumyaranjan Acharya} \\ \vspace{1pt}
+    \small +91-7892206706$|$ \href{mailto:dev@sacharya.com}{dev@sacharya.dev} $|$ 
+    \href{https://linkedin.com/in/yourname}{linkedin.com/in/yourname} $|$
+    \href{https://github.com/codehia}{github.com/codehia}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Krupajan Engineering College}{Bhubaneshwar, Odisha}
+      {Bachelor of Technology in Electrical Engineeering}{Aug. 2012 -- May 2016}
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Flockjay Inc}{Remote}
+      {Senior Backend Developer}{Jan 2021 -- Present}
+      \resumeItemListStart
+        \resumeItem{Sole backend engineer through the company's pivot from a sales bootcamp to a B2B SaaS platform; now senior on a 7-person team with 15+ enterprise clients including Redis}
+        \resumeItem{Brought average response times and query counts down \textasciitilde70\% through targeted query optimization, shipped incrementally alongside normal feature work}
+        \resumeItem{Built a rule engine that runs customer-defined conditions on a schedule --- converts them to Django ORM queries at runtime to trigger enrollment and access changes}
+        \resumeItem{Set up SSO and SCIM provisioning with Okta and Microsoft Entra; the SCIM layer handles cross-org identity, letting the same user exist across multiple client orgs with different roles in each}
+        \resumeItem{Built a Salesforce-backed checkpoint system for learning paths --- on completion it queries Salesforce, checks activity against author-set conditions, and only then unlocks the next step}
+        \resumeItem{Built the content system from scratch (courses, learning paths, assets, collections) and integrated Salesforce, Clari, and Gong to bring real-world sales and call data into the platform for authors}
+        \resumeItem{Added full-text search across all content types using PostgreSQL's built-in FTS --- first search feature on the platform}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Radicali}{Bengaluru, KA}
+      {Software Engineer}{Feb. 2020 -- Jan. 2021}
+      \resumeItemListStart
+        \resumeItem{Replaced the existing search framework with Elasticsearch, cutting search response times by over 50\%}
+        \resumeItem{Wrote and optimized backend tests, bringing code coverage up by 30\%+}
+        \resumeItem{Built a data pipeline with Scrapy, SQS, and S3 to crawl 50,000+ links daily, validate and clean the data into a reliably updated dataset}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Masai School}{Bengaluru, KA}
+      {Technical Mentor}{Jun. 2019 -- Dec. 2019}
+      \resumeItemListStart
+        \resumeItem{Mentored students across frontend fundamentals and practical projects over an 8-month coding bootcamp}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Manch}{Bengaluru, KA}
+      {Python Developer}{Mar. 2018 -- Apr. 2019}
+      \resumeItemListStart
+        \resumeItem{Built and maintained a Scrapy/Selenium crawler that translated and saved 10,000+ pages per day into MongoDB}
+      \resumeItemListEnd
+    \resumeSubheading
+      {iQuanti}{Bengaluru, KA}
+      {Product Support Engineer}{Jan. 2017 -- Feb. 2018}
+      \resumeItemListStart
+        \resumeItem{Built a Django app that fetched keyword rankings from a third-party API and saved results to S3 and Snowflake, cutting ad-hoc report turnaround time by over 50\%}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript, TypeScript} \\
+     \textbf{Frameworks}{: React, Django, Django REST Framework} \\
+     \textbf{Tools}{: Git, AWS, PostgreSQL, Elasticsearch, Celery, SQS, Snowflake, Scrapy}
+    }}
+ \end{itemize}
+
+\end{document}
