@@ -1,17 +1,18 @@
-tex-compile:
-    tectonic resume.tex
+# Legacy LaTeX compile (archived - now using Typst)
+# tex-compile:
+#     tectonic resume.tex
 
-typ-compile file="main.typ":
-    typst compile {{file}}
+compile:
+    typst compile --font-path fonts resume.typ
 
 open:
-    zathura ./simple-technical-resume/main.pdf &
+    zathura resume.pdf &
 
-# co: typ-compile {{file}} open
+watch:
+    typst watch --font-path fonts resume.typ
 
-watch file="main.typ":
-    echo {{file}} | entr typstyle -i {{file}}
-    # echo resume.tex | entr tectonic resume.tex
+format:
+    typstyle -i resume.typ
 
 download:
     curl -L https://github.com/codehia/resume/raw/master/resume.pdf -o resume.pdf
