@@ -1,4 +1,4 @@
-#import "@preview/simple-technical-resume:0.1.1": *
+#import "resume-lib.typ": *
 
 #set text(font: "IBM Plex Sans")
 
@@ -8,6 +8,9 @@
 #let github = "codehia"
 #let linkedin = "soumyaracharya"
 #let personal-site = "sacharya.dev"
+
+#set list(spacing: 3pt)
+#set block(spacing: 7pt)
 
 #show: resume.with(
   top-margin: 0.45in,
@@ -23,7 +26,7 @@
 )
 
 #custom-title("Summary")[
-  Senior Backend Engineer with 7+ years building scalable Python/Django systems. Expert in REST APIs, SSO/SAML/SCIM, performance optimization, and full-text search. Strong focus on PostgreSQL query tuning, async programming, and data pipeline design.
+  Senior Backend Engineer with 7+ years building scalable Python/Django systems. Deep experience with REST APIs, SSO/SAML/SCIM, performance optimization, and full-text search. Strong focus on PostgreSQL query tuning, event-driven systems, and data pipeline design.
 ]
 
 #custom-title("Experience")[
@@ -35,13 +38,13 @@
     "Present",
   )[
     - Sole backend engineer through the company's pivot from a sales bootcamp to a B2B SaaS platform; now senior on a 7-person team with 15+ enterprise clients including Redis
-    - Brought average response times and query counts down approximately 70% through N+1 elimination, `select_related`/`prefetch_related` optimizations, and strategic database indexing; shipped incrementally alongside feature work
-    - Built a scheduling rule engine that compiles customer-defined conditions into Django ORM queries at runtime, triggering enrollment and access changes automatically
-    - Set up SSO and SCIM provisioning with Okta and Microsoft Entra, enabling automated onboarding of 100s of users per client; designed cross-org identity model allowing the same user to hold different roles across multiple organisations
-    - Built a Salesforce-backed checkpoint system for learning paths that validates completion against conditions set by content authors before unlocking the next step
-    - Built the content system from scratch (courses, learning paths, assets, collections) with full CRUD, versioning, and access control
-    - Integrated Salesforce, Clari, and Gong to bring real-world sales and call data into the platform for content authors, syncing opportunities, activities, and call recordings on a scheduled basis
-    - Added full-text search across all content types using PostgreSQL's built-in FTS (first search feature on the platform)
+    - Reduced average API response times and query counts by approximately 70% through backend improvements spanning endpoint restructuring and ORM query optimization
+    - Built a programmable automation engine that evaluates client-configured condition-action rulesets against any user attribute or activity metric, compiling them into Django ORM queries at runtime to automate any workflow on the platform
+    - Implemented SSO and SCIM provisioning with Okta and Microsoft Entra, including a custom cross-org identity model allowing the same user to hold independent roles across multiple client organisations
+    - Built a system that ties learning path progression to real-world sales activity, using Salesforce data to validate whether a rep has applied what they learned before unlocking next steps
+    - Architected the platform's core content system from scratch, delivering courses, learning paths, assets, and collections with versioning and access control, serving 15+ enterprise clients from a single unified codebase
+    - Integrated Salesforce, Clari, and Gong to build a catalogued library of real sales calls and recordings, enriched with deal context and outcomes, giving every rep access to relevant calls to understand what drove deals forward or caused them to fall through
+    - Delivered the platform's first search capability using PostgreSQL full-text search, covering all content types including call and video transcripts
   ]
 
   #work-heading(
@@ -73,7 +76,7 @@
     datetime(year: 2018, month: 3, day: 1),
     datetime(year: 2019, month: 4, day: 1),
   )[
-    - Built and maintained a Scrapy/Selenium crawler that translated and saved 10,000+ pages per day into MongoDB
+    - Built and maintained a Scrapy/Selenium crawler that scraped and stored 10,000+ pages per day into MongoDB
   ]
 
 
@@ -89,12 +92,14 @@
 ]
 
 #custom-title("Skills")[
+  #set list(spacing: 5pt)
   #skills()[
     - *Languages:* Python, JavaScript, TypeScript, SQL
-    - *Frameworks:* Django, Django REST Framework, FastAPI, Celery, Scrapy
+    - *Frameworks:* Django, Django REST Framework, Celery, Scrapy
     - *Databases:* PostgreSQL, Elasticsearch, MongoDB, Snowflake
     - *Infrastructure:* AWS (S3, SQS, EC2), Docker, Redis, Git, GitHub Actions
     - *Dev Tools:* Nix, Linux, tmux, Neovim
+    - *Expertise:* REST APIs, SSO/SAML/SCIM, Full-Text Search, Data Pipelines, System Integration
   ]
 ]
 
