@@ -1,7 +1,3 @@
-# Legacy LaTeX compile (archived - now using Typst)
-# tex-compile:
-#     tectonic resume.tex
-
 compile:
     typst compile --font-path fonts resume.typ
 

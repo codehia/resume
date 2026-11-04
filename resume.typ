@@ -1,7 +1,5 @@
 #import "resume-lib.typ": *
 
-#set text(font: "IBM Plex Sans")
-
 #let name = "Soumyaranjan Acharya"
 #let phone = "+91-9019904825"
 #let email = "dev@sacharya.dev"
@@ -13,6 +11,7 @@
 #set block(spacing: 7pt)
 
 #show: resume.with(
+  font: "IBM Plex Sans",
   top-margin: 0.45in,
   personal-info-font-size: 9.2pt,
   author-position: center,
@@ -35,16 +34,16 @@
     "Flockjay Inc",
     "Covina, CA (Remote)",
     datetime(year: 2021, month: 1, day: 18),
-    "Present",
+    datetime(year: 2026, month: 5, day: 15),
   )[
-    - Sole backend engineer through the company's pivot from a sales bootcamp to a B2B SaaS platform; now senior on a 7-person team with 15+ enterprise clients including Redis
-    - Reduced average API response times and query counts by approximately 70% through backend improvements spanning endpoint restructuring and ORM query optimization
-    - Built a programmable automation engine that evaluates client-configured condition-action rulesets against any user attribute or activity metric, compiling them into Django ORM queries at runtime to automate any workflow on the platform
-    - Implemented SSO and SCIM provisioning with Okta and Microsoft Entra, including a custom cross-org identity model allowing the same user to hold independent roles across multiple client organisations
-    - Built a system that ties learning path progression to real-world sales activity, using Salesforce data to validate whether a rep has applied what they learned before unlocking next steps
-    - Architected the platform's core content system from scratch, delivering courses, learning paths, assets, and collections with versioning and access control, serving 15+ enterprise clients from a single unified codebase
-    - Integrated Salesforce, Clari, and Gong to build a catalogued library of real sales calls and recordings, enriched with deal context and outcomes, giving every rep access to relevant calls to understand what drove deals forward or caused them to fall through
-    - Delivered the platform's first search capability using PostgreSQL full-text search, covering all content types including call and video transcripts
+    - Cut API response times and query counts ~70% via endpoint restructuring and ORM query optimization
+    - Built a rule engine that compiles client-defined conditions into Django ORM queries at runtime, automating enrollment and access changes
+    - Implemented SSO/SCIM with Okta and Microsoft Entra, including a cross-org identity model giving one user independent roles across client orgs
+    - Designed and built the core content system (courses, learning paths, assets, collections) with versioning and access control, serving 15+ enterprise clients
+    - Integrated Salesforce, Clari, and Gong to build a library of sales calls tagged with deal outcomes, and to gate learning-path progress on real sales activity
+    - Built the platform's first search with PostgreSQL FTS over 100k+ documents, including call/video transcripts, at sub-200ms
+    - Added semantic search with pgvector over the same corpus, under 400ms
+    - Adopted agentic coding with Claude Code for refactors, test generation, and code review
   ]
 
   #work-heading(
@@ -97,8 +96,7 @@
     - *Languages:* Python, JavaScript, TypeScript, SQL
     - *Frameworks:* Django, Django REST Framework, Celery, Scrapy
     - *Databases:* PostgreSQL, Elasticsearch, MongoDB, Snowflake
-    - *Infrastructure:* AWS (S3, SQS, EC2), Docker, Redis, Git, GitHub Actions
-    - *Dev Tools:* Nix, Linux, tmux, Neovim
+    - *Infrastructure:* AWS (S3, SQS, EC2), Docker, Redis, Git, GitHub Actions, Nix, Linux
     - *Expertise:* REST APIs, SSO/SAML/SCIM, Full-Text Search, Data Pipelines, System Integration
   ]
 ]

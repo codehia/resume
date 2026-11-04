@@ -1,6 +1,6 @@
 # Resume
 
-LaTeX resume built with [Tectonic](https://tectonic-typesetting.github.io/).
+Typst resume built on [simple-technical-resume](https://typst.app/universe/package/simple-technical-resume).
 
 ## Download
 
@@ -10,15 +10,13 @@ Or via terminal:
 
 ```bash
 just download
-# or
-curl -L https://github.com/codehia/resume/raw/master/resume.pdf -o resume.pdf
 ```
 
 ## Build from source
 
 ```bash
-just compile   # compile resume.tex → resume.pdf
+just compile   # compile resume.typ → resume.pdf
 just open      # open in zathura
-just co        # compile then open
 just watch     # recompile on file change
+just format    # format resume.typ with typstyle
 ```
